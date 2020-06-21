@@ -19,9 +19,9 @@ class CreateTweetsTable extends Migration
             $table->string('image');
             $table->string('tweet_num')->unique();
             $table->string('user_num')->unique();
-            $table->int('favorite_count');
-            $table->int('reply_count');
-            $table->int('reply_flg');
+            $table->integer('favorite_count');
+            $table->integer('reply_count');
+            $table->integer('reply_flg');
             $table->string('reply_to');
             $table->timestamps();
         });
