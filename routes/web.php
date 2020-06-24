@@ -37,3 +37,7 @@ Route::get('/tweetdetails', function () {
 Route::get('/mypage', function () {
     return view('MyPage.index');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
