@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 //ホーム画面
-Route::get('/', 'HomeController@index');    
+Route::get('/', 'HomeController@index')->name('root');
 Route::get('/home', 'HomeController@index')->name('home');
 
 // //ログイン画面
