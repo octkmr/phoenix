@@ -13,31 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Laravelのホーム画面(最終的に削除)
-Route::get('/', function () {
-    return view('welcome');
-});
-
-//ログイン画面
-Route::get('/login', function () {
-    return view('Login.index');
-});
-
-//tweet一覧画面
-Route::get('/tweetlist', function () {
-    return view('TweetList.index');
-});
-
-//tweet詳細画面
-Route::get('/tweetdetails', function () {
-    return view('TweetDetails.index');
-});
-
-//mypage画面
-Route::get('/mypage', function () {
-    return view('MyPage.index');
-});
-
+//ログイン認証群
 Auth::routes();
 
+//ホーム画面
+Route::get('/', 'HomeController@index');    
 Route::get('/home', 'HomeController@index')->name('home');
+
+// //ログイン画面
+// Route::get('/login', function () {
+//     return view('Login.index');
+// });
+
+// //tweet一覧画面
+// Route::get('/tweetlist', function () {
+//     return view('TweetList.index');
+// });
+
+// //tweet詳細画面
+// Route::get('/tweetdetails', function () {
+//     return view('TweetDetails.index');
+// });
+
+// //mypage画面
+// Route::get('/mypage', function () {
+//     return view('MyPage.index');
+// });
